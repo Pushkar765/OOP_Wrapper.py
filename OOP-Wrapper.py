@@ -1,4 +1,4 @@
-print("         Welcome to or new program :)        ")
+print("         Welcome to our new program :)        ")
 print("Employee Managament System.")
 print()
 
@@ -99,8 +99,9 @@ while True:
             print(obj2.getData())
 
     elif Choice == 0:
-        print("\n Thanks for visiting our 'Employee Managament' :) ")
+        print("\n Thanks for visiting our 'Employee Managament' Programme :) ")
         break
 
     else:
-        print("Your entered choice is invalid (:")
+
+        print("Your entered choice is invalid :(")
