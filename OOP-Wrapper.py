@@ -52,7 +52,7 @@ while True:
         obj = Person(name,age)
         per.append(obj)
 
-        print("\n Employee added successfully :)!\n")
+        print("\n Person added successfully :)!\n")
 
     elif Choice == 2 :
         name = input("Enter Employee name : ")
@@ -63,7 +63,7 @@ while True:
         obj = Employee(name,age,empId,salary)
         emp.append(obj)
         
-        print("\n Manager added successfully :)\n")
+        print("\n Employee added successfully :)\n")
 
     elif Choice == 3:
         name = input("Enter Manager name : ")
@@ -75,33 +75,45 @@ while True:
         obj = Manager(name,age,empId,salary,department)
         man.append(obj)
 
+        print("Manager addedd successfully :)")             
+
 
     elif Choice == 4:
-        print("Enter 1 to watch Person's details.")
-        print("Enter 2 to watch Employee's details.")
-        print("Enter 3 to watch Manager's details.")
+        while True:
 
-        Ch = int(input("Choose option given above : "))
-        
-        # obj1 = Employee()
-        # obj2 = Manager()
+            print("Enter 1 to watch Person's details.")
+            print("Enter 2 to watch Employee's details.")
+            print("Enter 3 to watch Manager's details.")
+            print("Enter 0 to Exit from this details.")
 
-        if Ch == 1:
-            obj = Person(name,age)
-            print(obj.getData())
+            Ch = int(input("Choose option given above : "))
+            
+            # obj1 = Employee()
+            # obj2 = Manager()
 
-        elif Ch == 2:
-            obj1 = Employee(name,age,empId,salary)
-            print(obj1.getData())
+            if Ch == 1:
+                obj = Person(name,age)
+                print(obj.getData())
 
-        elif Ch == 3:
-            obj2 = Manager(name,age,empId,salary,department)
-            print(obj2.getData())
+            elif Ch == 2:
+                obj1 = Employee(name,age,empId,salary)
+                print(obj1.getData())
+
+            elif Ch == 3:
+                obj2 = Manager(name,age,empId,salary,department)
+                print(obj2.getData())
+
+            elif Ch == 0:
+                print("You're going to outside of showing details.")
+                break
+
+            else:
+                print("You entered Invalid choice :(")
 
     elif Choice == 0:
         print("\n Thanks for visiting our 'Employee Managament' Programme :) ")
         break
 
     else:
-
         print("Your entered choice is invalid :(")
+
