@@ -22,10 +22,7 @@ class Employee:
 
 class Manager(Employee):
     def __init__(self,name,age,empId,salary,department):
-        self.name = name
-        self.age = age
-        self.empId = empId
-        self.salary = salary
+        super().__init__(name,age,empId,salary)
         self.department = department
 
     def getData(self):
@@ -87,9 +84,6 @@ while True:
             print("Enter 0 to Exit from this details.")
 
             Ch = int(input("Choose option given above : "))
-            
-            # obj1 = Employee()
-            # obj2 = Manager()
 
             if Ch == 1:
                 obj = Person(name,age)
@@ -104,7 +98,7 @@ while True:
                 print(obj2.getData())
 
             elif Ch == 0:
-                print("You're going to outside of showing details.")
+                print("Go back to main menu.")
                 break
 
             else:
